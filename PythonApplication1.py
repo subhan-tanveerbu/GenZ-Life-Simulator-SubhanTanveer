@@ -1,4 +1,11 @@
-﻿print("💫 welcome to the GenZ Gym Life Sim 💫")
+﻿# 🌟🌟🌟 GenZ Gym Life Simulator 🌟🌟🌟
+# --------------------------------------------------------
+# welcome to the most chaotic yet motivating gym sim ever 😭💪
+# this program lets u live ur best gym-rat fantasy fr
+# vibey dialogues + workouts + stats = peak productivity ✨
+# made for assignment but lowkey fun to play not gonna lie 😎
+# --------------------------------------------------------
+print("💫 welcome to the GenZ Gym Life Sim 💫")
 
 name = input("👋 hey bestie, what’s ur name? ")
 
