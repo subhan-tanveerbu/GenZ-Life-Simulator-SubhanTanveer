@@ -1,4 +1,5 @@
-﻿# 🌟🌟🌟 GenZ Gym Life Simulator 🌟🌟🌟
+﻿#Subhan Tanveer BSAI 3A (01-136242-041)
+# 🌟🌟🌟 GenZ Gym Life Simulator 🌟🌟🌟
 # --------------------------------------------------------
 # welcome to the most chaotic yet motivating gym sim ever 😭💪
 # this program lets u live ur best gym-rat fantasy fr
