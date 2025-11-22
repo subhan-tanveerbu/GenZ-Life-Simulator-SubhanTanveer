@@ -1,4 +1,4 @@
-﻿#Subhan Tanveer BSAI 3A (01-136242-041)
+﻿# Subhan Tanveer BSAI 3A (01-136242-041)
 # 🌟🌟🌟 GenZ Gym Life Simulator 🌟🌟🌟
 # --------------------------------------------------------
 # welcome to the most chaotic yet motivating gym sim ever 😭💪
@@ -6,6 +6,7 @@
 # vibey dialogues + workouts + stats = peak productivity ✨
 # made for assignment but lowkey fun to play not gonna lie 😎
 # --------------------------------------------------------
+
 print("💫 welcome to the GenZ Gym Life Sim 💫")
 
 name = input("👋 hey bestie, what’s ur name? ")
@@ -28,11 +29,12 @@ else:
 # ask for gym goal
 goal = input("\n🎯 what’s the goal for today? (muscle / weight loss / strength): ").lower().strip()
 
-# player stats
+# player stats (NEW FIELD: confidence)
 player = {
     "energy": 100,
     "motivation": 80,
     "progress": 0,
+    "confidence": 50,   # NEW FIELD 🌟
     "mood": mood
 }
 
@@ -67,6 +69,7 @@ def show_stats():
     print(f"⚡ energy: {player['energy']}")
     print(f"🔥 motivation: {player['motivation']}")
     print(f"⭐ progress: {player['progress']}")
+    print(f"💥 confidence: {player['confidence']}")   # NEW FIELD
     print(f"🧠 mood: {player['mood']}")
     print("--------------------------")
 
@@ -100,6 +103,7 @@ while True:
         player["energy"] -= 20
         player["progress"] += 10
         player["motivation"] += 5
+        player["confidence"] += 7   # NEW 🌟
         player["mood"] = "💪 pumped"
         print("✅ workout done! lowkey proud of u rn 😎")
 
@@ -109,6 +113,7 @@ while True:
         if player["energy"] > 100:
             player["energy"] = 100
         player["motivation"] += 5
+        player["confidence"] += 3    # NEW 🌟
         player["mood"] = "😋 full & happy"
         print("food = serotonin = success 🍔✨")
 
@@ -116,6 +121,7 @@ while True:
         print("\n😴 rest dayyy let’s goo 💯 netflix counts as recovery right?")
         player["energy"] = 100
         player["motivation"] -= 5
+        player["confidence"] -= 2    # NEW 🌟
         player["mood"] = "😴 chill"
         print("you feel relaxed but kinda lazy ngl 😂")
 
@@ -140,4 +146,7 @@ while True:
         player["motivation"] = 0
     if player["progress"] > 100:
         player["progress"] = 100
-
+    if player["confidence"] > 100:     # NEW LIMIT
+        player["confidence"] = 100
+    if player["confidence"] < 0:
+        player["confidence"] = 0
