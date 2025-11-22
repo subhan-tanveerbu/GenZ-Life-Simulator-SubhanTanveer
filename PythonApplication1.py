@@ -2,14 +2,22 @@
 # 🌟🌟🌟 GenZ Gym Life Simulator 🌟🌟🌟
 # --------------------------------------------------------
 # welcome to the most chaotic yet motivating gym sim ever 😭💪
-# this program lets u live ur best gym-rat fantasy fr
-# vibey dialogues + workouts + stats = peak productivity ✨
-# made for assignment but lowkey fun to play not gonna lie 😎
 # --------------------------------------------------------
 
 print("💫 welcome to the GenZ Gym Life Sim 💫")
 
 name = input("👋 hey bestie, what’s ur name? ")
+
+# 🔥 NEW: AGE CHECK
+age = int(input("🎂 how old are you bestie? "))
+
+if age < 13:
+    print("\n🚫 lil bro this gym is too heavy for u 😭 come back when you're 13+ fr")
+    exit()
+elif 13 <= age <= 15:
+    print("\n⚠️ okay mini gym-rat 😭 take it easy and don’t break ur bones pls 💀")
+else:
+    print("\n🔥 yesss perfect age to grind fr 💪")
 
 # lil chat before gym starts
 print(f"\nsooo {name}, before we hit the gym... how’s life today?")
@@ -29,13 +37,14 @@ else:
 # ask for gym goal
 goal = input("\n🎯 what’s the goal for today? (muscle / weight loss / strength): ").lower().strip()
 
-# player stats (NEW FIELD: confidence)
+# player stats (NEW FIELD: confidence + age)
 player = {
     "energy": 100,
     "motivation": 80,
     "progress": 0,
-    "confidence": 50,   # NEW FIELD 🌟
-    "mood": mood
+    "confidence": 50,
+    "mood": mood,
+    "age": age      # NEW AGE FIELD 🌟
 }
 
 # workout lists
@@ -69,8 +78,9 @@ def show_stats():
     print(f"⚡ energy: {player['energy']}")
     print(f"🔥 motivation: {player['motivation']}")
     print(f"⭐ progress: {player['progress']}")
-    print(f"💥 confidence: {player['confidence']}")   # NEW FIELD
+    print(f"💥 confidence: {player['confidence']}")
     print(f"🧠 mood: {player['mood']}")
+    print(f"🎂 age: {player['age']}")  # NEW AGE FIELD
     print("--------------------------")
 
 # show workout plan
@@ -78,7 +88,7 @@ def show_workout(goal):
     print("\n💪 today’s workout plan:")
     plan = workouts.get(goal)
     if not plan:
-        print("😅 idk that goal tbh... try typing muscle / weight loss / strength again?")
+        print("😅 idk that goal tbh... try muscle / weight loss / strength again")
         return
     for ex in plan:
         print("➡️", ex)
@@ -103,7 +113,7 @@ while True:
         player["energy"] -= 20
         player["progress"] += 10
         player["motivation"] += 5
-        player["confidence"] += 7   # NEW 🌟
+        player["confidence"] += 7
         player["mood"] = "💪 pumped"
         print("✅ workout done! lowkey proud of u rn 😎")
 
@@ -113,7 +123,7 @@ while True:
         if player["energy"] > 100:
             player["energy"] = 100
         player["motivation"] += 5
-        player["confidence"] += 3    # NEW 🌟
+        player["confidence"] += 3
         player["mood"] = "😋 full & happy"
         print("food = serotonin = success 🍔✨")
 
@@ -121,7 +131,7 @@ while True:
         print("\n😴 rest dayyy let’s goo 💯 netflix counts as recovery right?")
         player["energy"] = 100
         player["motivation"] -= 5
-        player["confidence"] -= 2    # NEW 🌟
+        player["confidence"] -= 2
         player["mood"] = "😴 chill"
         print("you feel relaxed but kinda lazy ngl 😂")
 
@@ -146,7 +156,7 @@ while True:
         player["motivation"] = 0
     if player["progress"] > 100:
         player["progress"] = 100
-    if player["confidence"] > 100:     # NEW LIMIT
+    if player["confidence"] > 100:
         player["confidence"] = 100
     if player["confidence"] < 0:
         player["confidence"] = 0
